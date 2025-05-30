@@ -1,0 +1,73 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #0c1a2b;
+  color: #FFA860;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  position: absolute;
+  left: 40px; 
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+
+.logo-stem {
+  color: #f05a28;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  
+}
+
+.logo-sub {
+  color: #f05a28;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  gap: 100px;
+  margin-right: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20x;
+  position: center;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: #f05a28;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #f05a28;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after,
+.nav a:focus::after {
+  width: 100%;
+}
+

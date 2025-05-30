@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+.pie-container {
+  background-color: #0c1a2b; /* Fondo igual al header */
+  color: white;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  gap: 20px;
+  border-top: 2px solid #f05a28; /* Borde naranja fuerte */
+}
+
+.pie-logo img {
+  width: 120px;
+  height: auto;
+}
+
+.pie-info {
+  flex: 1;
+  text-align: center;
+}
+
+.pie-text {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #FFA860; /* Naranja suave como acento */
+}
+
+.pie-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.pie-link:hover {
+  color: #f05a28; /* Hover naranja intenso */
+}
+
+.pie-social {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  color: #FFA860; /* Íconos en naranja suave */
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #f05a28; /* Hover naranja fuerte */
+}
+
+@media (max-width: 768px) {
+  .pie-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pie-social {
+    justify-content: center;
+  }
+}

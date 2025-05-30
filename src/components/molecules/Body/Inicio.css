@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
+
+.inicio-container {
+  background-color: #0a1728;
+  color: white;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  padding: 30px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.lado {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.imagen {
+  max-width: 100%;
+  height: auto;
+  max-height: 360px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+.bloque-texto {
+  text-align: center;
+  margin-top: 15px;
+  max-width: 800px;
+  padding: 0 15px;
+}
+
+.subtitulo {
+  margin-bottom: 5px; 
+  font-size: 1.8rem;
+  color: #f05a28;
+  letter-spacing: 1px;
+}
+
+.intro-inicio {
+  margin-top: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #FFA860;
+}
+
+
+@media (max-width: 768px) {
+  .contenido {
+    flex-direction: column;
+  }
+
+  .imagen {
+    max-height: 280px;
+  }
+
+  .subtitulo {
+    font-size: 1.4rem;
+  }
+
+  .intro-inicio {
+    font-size: 0.95rem;
+  }
+}

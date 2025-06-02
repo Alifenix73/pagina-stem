@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6401da30.css",
-    "main.js": "/static/js/main.0dedcfd1.js",
+    "main.js": "/static/js/main.856ec542.js",
     "static/js/453.497d361b.chunk.js": "/static/js/453.497d361b.chunk.js",
     "static/media/ruta-del-curso.png": "/static/media/ruta-del-curso.d9454325c28348d3cf61.png",
     "static/media/background.jpg": "/static/media/background.8e7b4559e34881c7ca80.jpg",
@@ -9,11 +9,11 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.6401da30.css.map": "/static/css/main.6401da30.css.map",
-    "main.0dedcfd1.js.map": "/static/js/main.0dedcfd1.js.map",
+    "main.856ec542.js.map": "/static/js/main.856ec542.js.map",
     "453.497d361b.chunk.js.map": "/static/js/453.497d361b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6401da30.css",
-    "static/js/main.0dedcfd1.js"
+    "static/js/main.856ec542.js"
   ]
 }

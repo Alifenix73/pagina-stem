@@ -1,56 +1,60 @@
 import './Contacto.css';
+import { useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const Contacto = () => {
+  const [enviado, setEnviado] = useState(false);
+
+  const manejarEnvio = (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    fetch("https://formsubmit.co/ajax/contacto@steminstitutomexico.com", {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nombre: form.nombre.value,
+        email: form.email.value,
+        mensaje: form.mensaje.value
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success === "true") {
+        setEnviado(true);
+        form.reset();
+      }
+    })
+    .catch(error => {
+      console.error("Error al enviar:", error);
+    });
+  };
+
   return (
     <section id="contacto" className="contacto-container">
       <h2 className="titulo-contacto">Contáctanos</h2>
       <div className="contacto-contenido">
-        {/* Formulario con Formsubmit */}
-        <form
-          className="formulario-contacto"
-          action="https://formsubmit.co/contacto@steminstitutomexico.com"
-          method="POST"
-        >
-          {/* Campos ocultos para redirección y desactivar captcha */}
-          <input type="hidden" name="_next" value="https://steminstitutomexico.com/gracias" />
-          <input type="hidden" name="_captcha" value="false" />
+        {enviado ? (
+          <p className="mensaje-confirmacion">Gracias por tu mensaje. Te responderemos pronto.</p>
+        ) : (
+          <form className="formulario-contacto" onSubmit={manejarEnvio}>
+            <label htmlFor="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
 
-          <label htmlFor="nombre">Nombre</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="Tu nombre completo"
-            required
-          />
+            <label htmlFor="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com" />
 
-          <label htmlFor="email">Correo electrónico</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="correo@ejemplo.com"
-            required
-          />
+            <label htmlFor="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
 
-          <label htmlFor="mensaje">Mensaje</label>
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            rows="5"
-            placeholder="Escribe tu mensaje aquí..."
-            required
-          ></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        )}
 
-          <button type="submit">Enviar</button>
-        </form>
-
-        {/* Información y WhatsApp */}
         <div className="info-contacto">
           <p>También puedes escribirnos por WhatsApp:</p>
           <a
-            href="https://wa.me/522293241413?text=Hola%2C%20me%20gustaría%20más%20información%20sobre%20los%20cursos"
+            href="https://wa.me/522293731604?text=Hola%2C%20me%20gustaría%20más%20información%20sobre%20los%20cursos"
             target="_blank"
             rel="noopener noreferrer"
             className="whatsapp-boton"
@@ -59,16 +63,6 @@ const Contacto = () => {
           </a>
 
           <div className="datos-contacto">
-            <p>
-              <strong>Correo:</strong>{' '}
-              <a
-                href="mailto:contacto@steminstitutomexico.com"
-                style={{ color: '#FFA860', textDecoration: 'underline' }}
-              >
-                contacto@steminstitutomexico.com
-              </a>
-            </p>
-            <p><strong>Teléfono:</strong> +52 2293 241413</p>
             <p><strong>Dirección:</strong> Veracruz, México</p>
           </div>
         </div>
@@ -78,6 +72,3 @@ const Contacto = () => {
 };
 
 export default Contacto;
-
-
-

@@ -1,147 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
 .contacto-container {
-  background-color: #0c1a2b; /* Fondo igual al header */
-  color: white;
-  font-family: 'Inter', sans-serif;
+  background-color: #0c1a2b;
   padding: 60px 20px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  color: white;
+  font-family: 'Comic Sans MS', sans-serif;
   text-align: center;
 }
 
 .titulo-contacto {
   font-size: 2rem;
   margin-bottom: 40px;
-  font-weight: 500;
-  font-style: italic;
-  color: #FFA860; /* Naranja suave */
+  color: #FFA860;
 }
 
 .contacto-contenido {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centrado horizontal */
-  align-items: flex-start;
-  gap: 60px;
+  justify-content: center;
+  gap: 40px;
   max-width: 1000px;
-  width: 100%;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 .formulario-contacto {
-  flex: 1 1 450px;
-  background-color: #111b2e;
-  padding: 30px;
-  border-radius: 12px;
-  border: 2px solid #f05a28; /* Borde naranja intenso */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  margin: 0 auto;
+  flex: 1 1 300px;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  max-width: 480px;
-}
-
-.formulario-contacto label {
-  display: block;
-  font-weight: 500;
-  font-size: 0.95rem;
-  font-style: italic;
-  color: #FFA860;
+  gap: 15px;
 }
 
 .formulario-contacto input,
 .formulario-contacto textarea {
-  width: 100%;
   padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background-color: #0c1a2b;
+  border: 2px solid #f05a28;
+  border-radius: 6px;
+  background-color: #14273f;
   color: white;
-  font-size: 0.9rem;
-  outline: none;
-  font-style: italic;
-  transition: border-color 0.3s ease;
-}
-
-.formulario-contacto input:focus,
-.formulario-contacto textarea:focus {
-  border-color: #f05a28;
+  font-size: 1rem;
+  font-family: 'Comic Sans MS', sans-serif;
 }
 
 .formulario-contacto input::placeholder,
 .formulario-contacto textarea::placeholder {
-  color: #bbb;
-  font-style: italic;
+  color: #cccccc;
 }
 
 .formulario-contacto button {
-  width: 100%;
-  background-color: transparent;
-  color: #FFA860;
+  background-color: #f05a28;
+  color: white;
+  border: none;
   padding: 12px;
-  border: 1px solid #FFA860;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
+  transition: background-color 0.3s ease;
+  font-family: 'Comic Sans MS', sans-serif;
 }
 
 .formulario-contacto button:hover {
-  background-color: #f05a28;
-  color: white;
-}
-
-.mensaje-confirmacion {
-  margin-top: 1rem;
-  color: #FFA860;
-  font-size: 0.95rem;
-  font-style: italic;
+  background-color: #ff7b47;
 }
 
 .info-contacto {
   flex: 1 1 300px;
-  max-width: 400px;
-  text-align: left;
-  font-size: 0.95rem;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 16px;
-}
-
-.datos-contacto {
-  line-height: 1.7;
+  text-align: center;
 }
 
 .whatsapp-boton {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background-color: #f05a28; /* Naranja fuerte */
+  gap: 8px;
+  background-color: #25D366;
   color: white;
-  padding: 10px 16px;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: background-color 0.3s;
-  width: fit-content;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-.whatsapp-boton:hover {
-  background-color: #d6491f;
+.datos-contacto {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.datos-contacto a {
+  color: #FFA860;
+  text-decoration: underline;
+}
+
+.mensaje-confirmacion {
+  font-size: 1.1rem;
+  color: #FFA860;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', sans-serif;
 }
 
 /* Responsive */
@@ -154,6 +107,6 @@
   .formulario-contacto,
   .info-contacto {
     width: 100%;
-    max-width: 100%;
+    max-width: 400px;
   }
 }

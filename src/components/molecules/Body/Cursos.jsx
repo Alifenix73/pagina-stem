@@ -9,13 +9,17 @@ const Cursos = () => {
     "Gestión de Proyectos", "Calidad", "Contabilidad y Costos",
     "Formación de Instructores", 
    "Inteligencia Artificial", "Robótica"," Algoritmos y Programación",  "Informática y Diseño",
-   "Dibujo Mecánico", 
+   "Dibujo Mecánico",  " Seguridad Industrial en Riesgos Eléctricos ", " Seguridad Industrial en Trabajos en Altura ", " Seguridad Industrial en Espacios Confinados ", 
+
+    " Electricidad Residencial y Comercial ",   " Refrigeración y aire acondicionado ", " Paneles solares "
  
   ];
   const cursosDerecha = [
    " Higiene y Seguridad Industrial ", " Mantenimiento ", " Metrologia y Normalizacion ", 
 
-    " Sistemas e Instalaciones Hidraulicas ",   " SolidWorks ", " CATIA ", " MATLAB ", 
+    " Sistemas e Instalaciones Hidraulicas ",   " SolidWorks ", " CATIA ", " MATLAB ", " Control de máquinas eléctricas ", " PLC (Controladores Lógicos Programables) ", " Neumática e Hidráulica ", 
+
+    " Instrumentación y Control   ",   " Diplomado en Automatización industrial ", " Diplomado Robótica   ", " Sistemas de generación de energía ", 
   ];
 
   return (

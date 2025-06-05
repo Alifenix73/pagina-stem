@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('../assets/background.jpg'); /* Asegúrate que esta ruta sea correcta */
+  background-image: url('../assets/background.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -10,10 +10,11 @@
   align-items: center;
   padding: 40px 20px;
   color: #fff;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Arial', sans-serif;
   box-sizing: border-box;
   border: 6px solid #f26a1b;
   box-shadow: 0 0 30px #f26a1b55;
+  font-style: normal;
 }
 
 .cards-container {
@@ -34,6 +35,8 @@
   transition: transform 0.3s ease;
   font-size: 0.85rem;
   text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
 }
 
 .info-card:hover {
@@ -45,6 +48,8 @@
   margin-bottom: 0.6rem;
   color: #FFA860;
   font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-style: normal;
 }
 
 .info-card p {
@@ -53,9 +58,10 @@
   color: #f0f0f0;
   word-break: break-word;
   overflow-wrap: break-word;
+  font-style: normal;
 }
 
-/* Responsive: en móviles se acomodan en columna */
+
 @media (max-width: 768px) {
   .hero {
     padding: 30px 15px;

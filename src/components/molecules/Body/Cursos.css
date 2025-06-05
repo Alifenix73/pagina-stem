@@ -3,7 +3,7 @@
   background-color: #0c1a2b;
   padding: 100px 0 80px; /* aumentado el padding-bottom */
   box-sizing: border-box;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 .cursos-wrapper {
@@ -34,6 +34,7 @@
   transition: all 0.3s ease;
   width: 100%;
   max-width: 400px;
+  font-style: normal;
 }
 
 .cuadro.expandido {
@@ -45,12 +46,14 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  font-style: normal;
 }
 
 .cuadro p {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
+  font-style: normal;
 }
 
 .lista-cursos {
@@ -63,6 +66,7 @@
 .lista-cursos li {
   margin: 4px 0;
   color: white;
+  font-style: normal;
 }
 
 .boton-toggle {
@@ -75,6 +79,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-style: normal;
 }
 
 .boton-toggle:hover {
@@ -93,6 +98,7 @@
   line-height: 1.5;
   text-align: center;
   padding: 0 20px;
+  font-style: normal;
 }
 
 @media (max-width: 768px) {

@@ -1,12 +1,12 @@
 .header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 64px;
+  height: 80px;
   background-color: #0c1a2b;
   color: #FFA860;
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 0 40px;
   z-index: 1000;
@@ -14,20 +14,17 @@
 }
 
 .logo {
-  position: absolute;
-  left: 40px; 
   display: flex;
   flex-direction: column;
   line-height: 1.1;
+  z-index: 1001;
 }
-
 
 .logo-stem {
   color: #f05a28;
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 1px;
-  
 }
 
 .logo-sub {
@@ -36,18 +33,36 @@
   letter-spacing: 1px;
 }
 
+.nav-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* MENÚ DESKTOP */
 .nav {
   display: flex;
-  gap: 100px;
-  margin-right: 20px;
+  gap: 60px;
+  align-items: center;
 }
 
 .nav a {
   color: white;
   text-decoration: none;
-  font-size: 20x;
-  position: center;
+  font-size: 18px;
   transition: color 0.2s ease;
+  position: relative;
 }
 
 .nav a:hover,
@@ -71,3 +86,31 @@
   width: 100%;
 }
 
+/* RESPONSIVE PARA MÓVIL */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-wrapper {
+    justify-content: flex-end;
+  }
+
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0c1a2b;
+    padding: 20px 0;
+    gap: 20px;
+    display: none;
+    z-index: 999;
+  }
+
+  .nav.activo {
+    display: flex;
+  }
+}
